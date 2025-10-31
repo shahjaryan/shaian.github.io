@@ -1,4 +1,73 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Shaian’s Website</title><style>
+	:root {
+  --bg-0: #111315;
+  --bg-1: #15181b;
+  --bg-2: #1c2024;
+  --text-0: #e6e6e6;
+  --text-1: #b9bec4;
+  --text-2: #8f97a1;
+  --border: #2a2f35;
+  --link: #8dc6ff;
+  --table-header: #20252b;
+  --table-row: #181c20;
+  --code-bg: #22262b;
+  --blockquote-border: #3a9ad9;
+}
+
+/* Base */
+html, body {
+  background: var(--bg-0);
+  color: var(--text-0);
+}
+
+/* Section surfaces */
+.block-color-default_background,
+.simple-table-header-color,
+.table_of_contents-link,
+.callout,
+.source,
+.code,
+blockquote {
+  background: var(--bg-1) !important;
+  color: var(--text-0) !important;
+}
+
+/* Headers and text */
+h1, h2, h3 { color: var(--text-0); }
+.page-title { color: var(--text-0); }
+p, li, time { color: var(--text-1); }
+
+/* Links */
+a, a.visited { color: var(--link); }
+a:hover { color: #b9e1ff; }
+
+/* HR, borders */
+hr, table, th, td, .source, .callout, .code {
+  border-color: var(--border) !important;
+}
+
+/* Tables */
+.simple-table-header-color { background: var(--table-header) !important; }
+table { border-left: none; border-right: none; }
+th { background: var(--table-header); color: var(--text-1); }
+td { background: var(--table-row); color: var(--text-0); }
+
+/* Code blocks */
+.code, code { background: var(--code-bg) !important; color: #e8e8e8; }
+code { color: #e6a5a5; } /* keep inline code readable */
+
+/* Blockquote */
+blockquote { border-left: 3px solid var(--blockquote-border); }
+
+/* Page header icon tint */
+.page-header-icon { color: var(--text-0); }
+
+/* Images (keep as-is) */
+img { background: transparent; }
+
+/* Checkbox contrast tweaks */
+.checkbox-on { filter: brightness(0.9); }
+.checkbox-off { filter: brightness(0.9) contrast(1.1); }
 /* cspell:disable-file */
 /* webkit printing magic: print all background colors */
 html {
