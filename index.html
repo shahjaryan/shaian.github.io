@@ -1,4 +1,4 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Shaian’s Website</title><style>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Shaian's Website</title><style>
 	:root {
   --bg-0: #111315;
   --bg-1: #15181b;
@@ -88,12 +88,166 @@ body {
 		margin: 2em auto;
 		max-width: 900px;
 		color: rgb(55, 53, 47);
+		padding: 0 1em;
+	}
+}
+
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 768px) {
+	body {
+		margin: 1em auto;
+		padding: 0 1em;
+		white-space: normal;
+	}
+	
+	.page-title {
+		font-size: 1.75rem;
+		margin-bottom: 0.5em;
+	}
+	
+	h1 {
+		font-size: 1.5rem;
+		margin-top: 1.25rem;
+	}
+	
+	h2 {
+		font-size: 1.25rem;
+		margin-top: 1rem;
+	}
+	
+	h3 {
+		font-size: 1.1rem;
+		margin-top: 0.75rem;
+	}
+	
+	/* Stack columns vertically on mobile */
+	.column-list {
+		flex-direction: column;
+	}
+	
+	.column {
+		width: 100% !important;
+		padding: 0;
+		margin-bottom: 1.5em;
+	}
+	
+	/* Override inline width styles on columns */
+	.column[style*="width"] {
+		width: 100% !important;
+	}
+	
+	.column:last-child {
+		margin-bottom: 0;
+	}
+	
+	/* Adjust header elements */
+	.page-header-icon {
+		font-size: 2rem;
+		margin-bottom: 0.75rem;
+	}
+	
+	.page-cover-image {
+		max-height: 25vh;
+	}
+	
+	/* Better spacing for paragraphs */
+	p {
+		margin-top: 0.75em;
+		margin-bottom: 0.75em;
+		line-height: 1.6;
+	}
+	
+	/* Ensure images don't overflow */
+	figure.image img,
+	figure img {
+		width: 100% !important;
+		height: auto;
+		max-width: 100%;
+	}
+	
+	/* Override inline styles for images on mobile */
+	img[style*="width"] {
+		width: 100% !important;
+		max-width: 100% !important;
+		height: auto !important;
+	}
+	
+	/* Adjust blockquote */
+	blockquote {
+		padding-left: 0.75em;
+		margin: 0.75em 0;
+		font-size: 0.95em;
+	}
+	
+	/* Better table handling on mobile */
+	table {
+		display: block;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+	
+	/* Adjust hr spacing */
+	hr {
+		margin: 1em 0;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	body {
+		margin: 0.75em auto;
+		padding: 0 0.75em;
+		white-space: normal;
+	}
+	
+	.page-title {
+		font-size: 1.5rem;
+	}
+	
+	h1 {
+		font-size: 1.35rem;
+		margin-top: 1rem;
+	}
+	
+	h2 {
+		font-size: 1.15rem;
+		margin-top: 0.875rem;
+	}
+	
+	.page-header-icon {
+		font-size: 1.75rem;
+	}
+	
+	.page-cover-image {
+		max-height: 20vh;
+	}
+	
+	p {
+		font-size: 0.95em;
+	}
+	
+	/* Make links easier to tap */
+	a {
+		min-height: 44px;
+		display: inline-block;
+		padding: 0.25em 0;
+	}
+	
+	/* Adjust list spacing */
+	ol, ul {
+		padding-inline-start: 1.5em;
+	}
+	
+	/* Reduce image margins on small screens */
+	figure {
+		margin: 1em 0;
 	}
 }
 
 body {
 	line-height: 1.5;
 	white-space: pre-wrap;
+	word-wrap: break-word;
+	overflow-x: hidden;
 }
 
 a,
@@ -181,6 +335,8 @@ hr {
 
 img {
 	max-width: 100%;
+	height: auto;
+	display: block;
 }
 
 @media only print {
