@@ -157,12 +157,19 @@ body {
 		line-height: 1.6;
 	}
 	
-	/* Ensure images don't overflow */
+	/* Ensure images don't overflow and remain centered */
+	figure.image {
+		text-align: center;
+		width: 100%;
+	}
+	
 	figure.image img,
 	figure img {
 		width: 100% !important;
 		height: auto;
 		max-width: 100%;
+		display: block;
+		margin: 0 auto;
 	}
 	
 	/* Override inline styles for images on mobile */
@@ -170,6 +177,15 @@ body {
 		width: 100% !important;
 		max-width: 100% !important;
 		height: auto !important;
+		display: block;
+		margin: 0 auto;
+	}
+	
+	/* Ensure figure containers are properly centered */
+	figure {
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	
 	/* Adjust blockquote */
@@ -239,7 +255,15 @@ body {
 	
 	/* Reduce image margins on small screens */
 	figure {
-		margin: 1em 0;
+		margin: 1em auto;
+		text-align: center;
+		width: 100%;
+	}
+	
+	figure.image img,
+	figure img {
+		display: block;
+		margin: 0 auto;
 	}
 }
 
@@ -336,7 +360,16 @@ hr {
 img {
 	max-width: 100%;
 	height: auto;
+}
+
+/* Center images within figure.image containers */
+figure.image {
+	text-align: center;
+}
+
+figure.image img {
 	display: block;
+	margin: 0 auto;
 }
 
 @media only print {
