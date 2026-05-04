@@ -237,6 +237,62 @@
     font-size: 0.9rem;
   }
 
+  /* PDF embed */
+  .poster-pdf {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--bg-soft);
+    transition: all 0.25s ease;
+  }
+
+  .poster-pdf:hover {
+    border-color: var(--accent-soft);
+    box-shadow: 0 12px 30px rgba(31, 29, 26, 0.08);
+  }
+
+  .poster-pdf iframe {
+    width: 100%;
+    height: 560px;
+    border: 0;
+    display: block;
+    background: var(--bg-soft);
+  }
+
+  .pdf-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0.85rem 1.1rem;
+    border-top: 1px solid var(--rule);
+    background: var(--bg);
+    font-size: 0.9rem;
+  }
+
+  .pdf-meta {
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .pdf-link {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(47, 93, 98, 0.3);
+    padding-bottom: 1px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .pdf-link:hover {
+    color: var(--ink);
+    border-bottom-color: var(--accent);
+  }
+
+  @media (max-width: 640px) {
+    .poster-pdf iframe { height: 380px; }
+  }
+
   /* Lightbox */
   .lightbox {
     position: fixed;
@@ -367,6 +423,23 @@
 
   <article class="poster reveal">
     <div class="poster-meta">
+      <span class="poster-date">April 30, 2026</span>
+    </div>
+    <h2 class="poster-title">
+      <a href="https://www.brandeis.edu/undergraduate-research/symposium/index.html" target="_blank" rel="noopener">Undergraduate Research and Creative Collaborations Symposium 2026</a>
+    </h2>
+
+    <div class="poster-pdf">
+      <iframe src="URCC_26_Poster_Aghasoltan_Final.pdf#view=FitH" title="URCC 2026 poster"></iframe>
+      <div class="pdf-actions">
+        <span class="pdf-meta">URCC_26_Poster_Aghasoltan_Final.pdf</span>
+        <a href="URCC_26_Poster_Aghasoltan_Final.pdf" target="_blank" rel="noopener" class="pdf-link">Open full PDF ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="poster reveal">
+    <div class="poster-meta">
       <span class="poster-date">August 7, 2025</span>
       <span class="poster-tag">Featured on Brandeis Stories</span>
     </div>
@@ -395,7 +468,7 @@
       <span class="poster-date">May 1, 2025</span>
     </div>
     <h2 class="poster-title">
-      <a href="https://www.brandeis.edu/undergraduate-research/symposium/index.html" target="_blank" rel="noopener">Undergraduate Research and Creative Collaborations Symposium</a>
+      <a href="https://www.brandeis.edu/undergraduate-research/symposium/index.html" target="_blank" rel="noopener">Undergraduate Research and Creative Collaborations Symposium 2025</a>
     </h2>
 
     <div class="poster-images">
@@ -416,7 +489,7 @@
 </div>
 
 <footer>
-  <p>© 2026 · Brandeis University</p>
+  <p>© 2026 Shaian Aghasoltan</p>
 </footer>
 
 <script>
