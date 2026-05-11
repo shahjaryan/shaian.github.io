@@ -3,7 +3,66 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Shaian Aghasoltan</title>
+<title>Shaian Aghasoltan — Brandeis University · Neurochemistry &amp; Cognition</title>
+<meta name="description" content="Shaian Aghasoltan is an undergraduate at Brandeis University studying Psychology and Chemistry, researching neurochemistry and cognition in the Berry Lab.">
+<meta name="author" content="Shaian Aghasoltan">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aghasoltan.me/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Shaian Aghasoltan">
+<meta property="og:title" content="Shaian Aghasoltan">
+<meta property="og:description" content="Undergraduate at Brandeis University studying Psychology and Chemistry, researching neurochemistry and cognition.">
+<meta property="og:url" content="https://aghasoltan.me/">
+<meta property="og:image" content="https://aghasoltan.me/56c9428a-08c1-4070-98ca-8da65dd62969.png">
+<meta property="profile:first_name" content="Shaian">
+<meta property="profile:last_name" content="Aghasoltan">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shaian Aghasoltan">
+<meta name="twitter:description" content="Undergraduate at Brandeis University studying Psychology and Chemistry, researching neurochemistry and cognition.">
+<meta name="twitter:image" content="https://aghasoltan.me/56c9428a-08c1-4070-98ca-8da65dd62969.png">
+
+<!-- Structured data: Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Shaian Aghasoltan",
+  "givenName": "Shaian",
+  "familyName": "Aghasoltan",
+  "url": "https://aghasoltan.me/",
+  "image": "https://aghasoltan.me/56c9428a-08c1-4070-98ca-8da65dd62969.png",
+  "jobTitle": "Undergraduate Research Assistant",
+  "description": "Undergraduate at Brandeis University studying Psychology and Chemistry, researching neurochemistry and cognition.",
+  "email": "mailto:shaian@brandeis.edu",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Brandeis University",
+    "url": "https://www.brandeis.edu"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Brandeis University"
+  },
+  "knowsAbout": [
+    "Neurochemistry",
+    "Cognitive Neuroscience",
+    "Magnetic Resonance Spectroscopy",
+    "Cognitive Aging",
+    "Neurodegeneration",
+    "Psychology",
+    "Chemistry"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/shaian-aghasoltan-32052a395",
+    "https://scholar.google.com/citations?user=JvgrjyAAAAAJ&hl=en"
+  ]
+}
+</script>
+
 <script>
   // Apply theme before render to avoid flash
   (function() {
@@ -228,14 +287,123 @@
     max-width: 460px;
   }
 
+  /* Portrait composition */
+  .portrait-wrap {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin-left: auto;
+  }
+
+  .portrait-float {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: portrait-float 7s ease-in-out infinite;
+  }
+
+  .portrait-halo {
+    position: absolute;
+    top: 12px;
+    left: -16px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--accent) 0%, var(--accent) 40%, transparent 70%);
+    opacity: 0.16;
+    filter: blur(4px);
+    z-index: 0;
+    animation: halo-pulse 5s ease-in-out infinite;
+  }
+
+  .portrait-ring {
+    position: absolute;
+    inset: -18px;
+    border: 1px dashed var(--accent);
+    opacity: 0.32;
+    border-radius: 50%;
+    z-index: 1;
+    animation: ring-rotate 55s linear infinite;
+  }
+
+  .portrait-ring::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 8px var(--accent);
+    opacity: 0.7;
+  }
+
   .portrait {
-    width: 200px;
-    height: 200px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     object-fit: cover;
     border: 1px solid var(--rule);
     background: var(--bg-soft);
-    margin-left: auto;
+    box-shadow: 0 16px 40px var(--portrait-shadow, rgba(31, 29, 26, 0.08));
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+    cursor: pointer;
+  }
+
+  .portrait-wrap:hover .portrait {
+    transform: scale(1.04);
+    box-shadow: 0 24px 60px rgba(31, 29, 26, 0.18);
+  }
+
+  .portrait-wrap:hover .portrait-halo {
+    opacity: 0.28;
+  }
+
+  .portrait-wrap:hover .portrait-ring {
+    opacity: 0.5;
+    animation-duration: 30s;
+  }
+
+  @keyframes portrait-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  @keyframes halo-pulse {
+    0%, 100% { opacity: 0.16; transform: scale(1); }
+    50% { opacity: 0.26; transform: scale(1.06); }
+  }
+
+  @keyframes ring-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Initial entrance pop */
+  .portrait-wrap {
+    animation: portrait-entrance 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @keyframes portrait-entrance {
+    from {
+      opacity: 0;
+      transform: scale(0.85);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Respect motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .portrait-float, .portrait-halo, .portrait-ring, .portrait-wrap {
+      animation: none !important;
+    }
   }
 
   /* Sections */
@@ -451,9 +619,9 @@
       gap: 2rem;
       text-align: left;
     }
-    .portrait {
-      width: 140px;
-      height: 140px;
+    .portrait-wrap {
+      width: 160px;
+      height: 160px;
       margin-left: 0;
       order: -1;
     }
@@ -504,7 +672,13 @@
       </p>
     </div>
     <div class="reveal" style="transition-delay: 0.15s;">
-      <img class="portrait" src="56c9428a-08c1-4070-98ca-8da65dd62969.png" alt="Portrait of Shaian Aghasoltan" onerror="this.style.display='none'"/>
+      <div class="portrait-wrap">
+        <div class="portrait-halo"></div>
+        <div class="portrait-ring"></div>
+        <div class="portrait-float">
+          <img class="portrait" src="56c9428a-08c1-4070-98ca-8da65dd62969.png" alt="Portrait of Shaian Aghasoltan" onerror="this.style.display='none'"/>
+        </div>
+      </div>
     </div>
   </div>
 </header>
@@ -565,8 +739,6 @@
     <h2 class="reveal">Contact</h2>
     <div class="contact-list reveal">
       <a href="mailto:shaian@brandeis.edu">shaian@brandeis.edu</a>
-      <span class="sep">·</span>
-       <a href="mailto:saghasoltan@mgh.harvard.edu">saghasoltan@mgh.harvard.edu</a>
       <span class="sep">·</span>
       <a href="https://www.linkedin.com/in/shaian-aghasoltan-32052a395" target="_blank" rel="noopener">LinkedIn</a>
       <span class="sep">·</span>
