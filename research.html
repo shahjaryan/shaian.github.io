@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Research — Shaian Aghasoltan</title>
+<meta name="description" content="Research by Shaian Aghasoltan — posters and conference presentations, including Brandeis SciFest and the Undergraduate Research and Creative Collaborations Symposium.">
+<meta name="author" content="Shaian Aghasoltan">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aghasoltan.me/research.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Shaian Aghasoltan">
+<meta property="og:title" content="Research — Shaian Aghasoltan">
+<meta property="og:description" content="Posters and conference presentations by Shaian Aghasoltan.">
+<meta property="og:url" content="https://aghasoltan.me/research.html">
+<meta property="og:image" content="https://aghasoltan.me/56c9428a-08c1-4070-98ca-8da65dd62969.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Research — Shaian Aghasoltan">
+<meta name="twitter:description" content="Posters and conference presentations by Shaian Aghasoltan.">
+
+<script>
+  (function() {
+    try {
+      var stored = localStorage.getItem('theme');
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (systemDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root,
+  html[data-theme="light"] {
+    --bg: #faf7f1;
+    --bg-soft: #f3efe6;
+    --ink: #1f1d1a;
+    --ink-soft: #4a4742;
+    --muted: #807a70;
+    --rule: #d9d3c6;
+    --accent: #2f5d62;
+    --accent-soft: #6b8a8d;
+    --nav-bg: rgba(250, 247, 241, 0.85);
+  }
+
+  html[data-theme="dark"] {
+    --bg: #181613;
+    --bg-soft: #221f1b;
+    --ink: #ece8df;
+    --ink-soft: #b8b3a8;
+    --muted: #807c72;
+    --rule: #38332d;
+    --accent: #8ab8bc;
+    --accent-soft: #6b8a8d;
+    --nav-bg: rgba(24, 22, 19, 0.85);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  body, nav, .poster-image, .poster-pdf, .pdf-actions,
+  .nav-brand, .nav-links a, .poster-title a, .poster-date,
+  .poster-tag, h1.page-title, footer p, .pdf-link, .pdf-meta,
+  .back-link {
+    transition: background-color 0.4s ease, color 0.4s ease,
+                border-color 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 0%, rgba(47, 93, 98, 0.04), transparent 70%),
+      radial-gradient(ellipse 50% 50% at 90% 100%, rgba(160, 130, 90, 0.04), transparent 70%);
+    transition: opacity 0.4s ease;
+  }
+
+  html[data-theme="dark"] body::before {
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 0%, rgba(138, 184, 188, 0.06), transparent 70%),
+      radial-gradient(ellipse 50% 50% at 90% 100%, rgba(180, 150, 110, 0.04), transparent 70%);
+  }
+
+  /* Nav */
+  nav {
+    border-bottom: 1px solid var(--rule);
+    background: var(--nav-bg);
+    backdrop-filter: saturate(160%) blur(8px);
+    -webkit-backdrop-filter: saturate(160%) blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .theme-toggle {
+    background: transparent;
+    border: 1px solid var(--rule);
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--ink-soft);
+    padding: 0;
+    transition: color 0.2s, border-color 0.2s, transform 0.4s ease;
+  }
+
+  .theme-toggle:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .theme-toggle:active { transform: scale(0.92); }
+
+  .theme-toggle svg { display: block; }
+  .theme-toggle .icon-sun { display: none; }
+  html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+  html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+
+  .nav-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 1.1rem 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .nav-brand em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.75rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 0.92rem;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--accent); }
+  .nav-links a.active { color: var(--accent); }
+
+  /* Page header */
+  .page-header {
+    padding: 4rem 1.75rem 2rem;
+    text-align: center;
+  }
+
+  .page-header-inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .page-eyebrow {
+    font-size: 0.78rem;
+    color: var(--muted);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  h1.page-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 4.5vw, 3rem);
+    font-weight: 500;
+    line-height: 1.1;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+
+  h1.page-title em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+
+  /* Posters */
+  .posters-container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 1.5rem 1.75rem 4rem;
+  }
+
+  .poster {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .poster:first-child {
+    margin-top: 1rem;
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .poster-meta {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .poster-date {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--muted);
+  }
+
+  .poster-tag {
+    font-size: 0.75rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.65rem;
+    border: 1px solid rgba(47, 93, 98, 0.25);
+    border-radius: 100px;
+  }
+
+  .poster-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.55rem;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+    color: var(--ink);
+  }
+
+  .poster-title a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .poster-title a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  .poster-images {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .poster-images.two-col {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1rem;
+  }
+
+  .poster-image {
+    display: block;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--bg-soft);
+    cursor: zoom-in;
+    transition: all 0.25s ease;
+    position: relative;
+  }
+
+  .poster-image:hover {
+    border-color: var(--accent-soft);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(31, 29, 26, 0.08);
+  }
+
+  .poster-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .poster-image .img-placeholder {
+    aspect-ratio: 16/10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+
+  /* PDF embed */
+  .poster-pdf {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--bg-soft);
+    transition: all 0.25s ease;
+  }
+
+  .poster-pdf:hover {
+    border-color: var(--accent-soft);
+    box-shadow: 0 12px 30px rgba(31, 29, 26, 0.08);
+  }
+
+  .poster-pdf iframe {
+    width: 100%;
+    height: 560px;
+    border: 0;
+    display: block;
+    background: var(--bg-soft);
+  }
+
+  .pdf-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0.85rem 1.1rem;
+    border-top: 1px solid var(--rule);
+    background: var(--bg);
+    font-size: 0.9rem;
+  }
+
+  .pdf-meta {
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .pdf-link {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(47, 93, 98, 0.3);
+    padding-bottom: 1px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .pdf-link:hover {
+    color: var(--ink);
+    border-bottom-color: var(--accent);
+  }
+
+  @media (max-width: 640px) {
+    .poster-pdf iframe { height: 380px; }
+  }
+
+  /* Lightbox */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(31, 29, 26, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    padding: 2rem;
+    cursor: zoom-out;
+  }
+
+  .lightbox.open { display: flex; }
+
+  .lightbox img {
+    max-width: 95vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(250, 247, 241, 0.15);
+    border: 1px solid rgba(250, 247, 241, 0.3);
+    color: var(--bg);
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Back */
+  .back-wrap {
+    text-align: center;
+    margin-top: 3.5rem;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .back-link:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  /* Footer */
+  footer {
+    padding: 3rem 1.75rem 4rem;
+    text-align: center;
+  }
+
+  footer p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  /* Reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    .nav-inner { padding: 0.9rem 1.25rem; }
+    .nav-links { gap: 1.25rem; }
+    .nav-links a { font-size: 0.88rem; }
+
+    .page-header { padding: 2.5rem 1.25rem 1.5rem; }
+    .posters-container { padding: 1rem 1.25rem 3rem; }
+
+    .poster-title { font-size: 1.3rem; }
+    .poster-images.two-col { grid-template-columns: 1fr; }
+
+    footer { padding: 2.5rem 1.25rem 3rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Shaian <em>Aghasoltan</em></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html" class="active">Research</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-inner reveal">
+    <div class="page-eyebrow">Research</div>
+    <h1 class="page-title">Posters & <em>presentations</em></h1>
+  </div>
+</header>
+
+<main class="posters-container">
+
+  <article class="poster reveal">
+    <div class="poster-meta">
+      <span class="poster-date">April 30, 2026</span>
+    </div>
+    <h2 class="poster-title">
+      <a href="https://www.brandeis.edu/undergraduate-research/symposium/index.html" target="_blank" rel="noopener">Undergraduate Research and Creative Collaborations Symposium 2026</a>
+    </h2>
+
+    <div class="poster-pdf">
+      <iframe src="URCC_26_Poster_Aghasoltan_Final.pdf#view=FitH" title="URCC 2026 poster"></iframe>
+      <div class="pdf-actions">
+        <span class="pdf-meta">URCC_26_Poster_Aghasoltan_Final.pdf</span>
+        <a href="URCC_26_Poster_Aghasoltan_Final.pdf" target="_blank" rel="noopener" class="pdf-link">Open full PDF ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="poster reveal">
+    <div class="poster-meta">
+      <span class="poster-date">August 7, 2025</span>
+      <span class="poster-tag">Featured on Brandeis Stories</span>
+    </div>
+    <h2 class="poster-title">
+      <a href="https://www.brandeis.edu/stories/2025/august/scifest.html" target="_blank" rel="noopener">Brandeis SciFest 2025</a>
+    </h2>
+
+    <div class="poster-images">
+      <a href="BrandeisPoster2_FINAL.png" class="poster-image" data-lightbox>
+        <img src="BrandeisPoster2_FINAL.png" alt="Brandeis SciFest 2025 poster" onerror="this.parentElement.innerHTML='<div class=&quot;img-placeholder&quot;>BrandeisPoster2_FINAL.png</div>'"/>
+      </a>
+    </div>
+
+    <div class="poster-images two-col">
+      <a href="image.png" class="poster-image" data-lightbox>
+        <img src="image.png" alt="SciFest companion image" onerror="this.parentElement.innerHTML='<div class=&quot;img-placeholder&quot;>image.png</div>'"/>
+      </a>
+      <a href="image%201.png" class="poster-image" data-lightbox>
+        <img src="image%201.png" alt="SciFest companion image" onerror="this.parentElement.innerHTML='<div class=&quot;img-placeholder&quot;>image 1.png</div>'"/>
+      </a>
+    </div>
+  </article>
+
+  <article class="poster reveal">
+    <div class="poster-meta">
+      <span class="poster-date">May 1, 2025</span>
+    </div>
+    <h2 class="poster-title">
+      <a href="https://www.brandeis.edu/undergraduate-research/symposium/index.html" target="_blank" rel="noopener">Undergraduate Research and Creative Collaborations Symposium 2025</a>
+    </h2>
+
+    <div class="poster-images">
+      <a href="poster1.png" class="poster-image" data-lightbox>
+        <img src="poster1.png" alt="URCC Symposium poster" onerror="this.parentElement.innerHTML='<div class=&quot;img-placeholder&quot;>poster1.png</div>'"/>
+      </a>
+    </div>
+  </article>
+
+  <div class="back-wrap reveal">
+    <a href="index.html" class="back-link">← Back to home</a>
+  </div>
+</main>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" aria-label="Close">×</button>
+  <img id="lightbox-img" src="" alt="" />
+</div>
+
+<footer>
+  <p>© 2026 Shaian Aghasoltan</p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Theme toggle
+  document.querySelector('.theme-toggle').addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  document.querySelectorAll('[data-lightbox]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      lightboxImg.src = link.getAttribute('href');
+      lightbox.classList.add('open');
+    });
+  });
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('open');
+    lightboxImg.src = '';
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      lightbox.classList.remove('open');
+      lightboxImg.src = '';
+    }
+  });
+</script>
+
+</body>
+</html>
